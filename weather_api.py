@@ -1,8 +1,9 @@
 import requests
+import os
 
 API_KEY = '7336babd2ce61f8563de4fb7f514319f'
 
-city_name = input('Enter a City Name: ')
+city_name = os.getenv('PARAM_cityname')
 
 API_URL = f'http://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_KEY}'
 try:
